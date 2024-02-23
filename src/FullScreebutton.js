@@ -9,9 +9,14 @@ const FullScreebutton = () => {
     function trackFullscreen() {
       const isFullscreen = document.fullscreenElement !== null;
       // Perform actions based on whether fullscreen is on or off
+      console.log("this is isFullScreen element", isFullscreen);
       if (!isFullscreen) {
         alert("please don't leave the fullscreen");
         setIsFullscreen(false);
+      }
+      if (isFullscreen) {
+        // alert("please don't leave the fullscreen");
+        setIsFullscreen(true);
       }
     }
     document.addEventListener("fullscreenchange", trackFullscreen);
@@ -43,3 +48,4 @@ const FullScreebutton = () => {
 };
 
 export default FullScreebutton;
+alert("you are leaving the screen");
